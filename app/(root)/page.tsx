@@ -8,16 +8,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default async function Home({ searchParams }: SearchParamProps) {
-  // const page = Number(searchParams?.page) || 1;
-  // const searchText = (searchParams?.query as string) || '';
-  // const category = (searchParams?.category as string) || '';
+  const page = Number(searchParams?.page) || 1;
+  const searchText = (searchParams?.query as string) || '';
+  const category = (searchParams?.category as string) || '';
 
-  // const events = await getAllEvents({
-  //   query: searchText,
-  //   category,
-  //   page,
-  //   limit: 6
-  // })
+  const events = await getAllEvents({
+    query: searchText,
+    category,
+    page,
+    limit: 6
+  })
 
   return (
     <>
@@ -47,11 +47,11 @@ export default async function Home({ searchParams }: SearchParamProps) {
         <h2 className="h2-bold">Explore <br /> Our Events</h2>
 
         <div className="flex w-full flex-col gap-5 md:flex-row">
-          {/* <Search />
-          <CategoryFilter /> */}
+          <Search />
+          <CategoryFilter />
         </div>
 
-        {/* <Collection 
+        <Collection 
           data={events?.data}
           emptyTitle="No Events Found"
           emptyStateSubtext="Come back later"
@@ -59,7 +59,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
           limit={6}
           page={page}
           totalPages={events?.totalPages}
-        /> */}
+        />
       </section>
     </>
   )
