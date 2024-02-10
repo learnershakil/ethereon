@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import style from "./style.module.css";
 
+import { disableScroll, enableScroll } from "@/lib/utils";
+
 const Door = () => {
   const moveInternalDoors = () => {
     if (internalDoorLeft.current && internalDoorRight.current) {
@@ -17,12 +19,10 @@ const Door = () => {
     }
   };
 
-  let disableScroll = () => {};
-
   useEffect(() => {
+    disableScroll();
     let doorTimer: number | null = null;
     let seconds: number = 1;
-    window.addEventListener("scroll", disableScroll);
     moveInternalDoors();
 
     doorTimer = window.setTimeout(() => {
@@ -30,10 +30,11 @@ const Door = () => {
     }, seconds * 1000);
 
     const scrollTimer: number = window.setTimeout(() => {
-      window.removeEventListener("scroll", disableScroll);
+      enableScroll();
     }, 2000);
 
     return () => {
+      enableScroll();
       doorTimer && clearTimeout(doorTimer);
       clearTimeout(scrollTimer);
     };
