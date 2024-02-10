@@ -1,0 +1,27 @@
+.moveLeft {
+  animation: moveToLeft 1s ease-in both;
+  -webkit-animation: moveToLeft 1s ease-in both;
+}
+
+.moveRight {
+  animation: moveToRight 1s ease-in both;
+  -webkit-animation: moveToRight 1s ease-in both;
+}
+
+@keyframes moveToLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-60vw);
+  }
+}
+
+@keyframes moveToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(60vw);
+  }
+}
