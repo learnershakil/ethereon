@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import style from "./style.module.css";
 
 import { disableScroll, enableScroll } from "@/lib/utils";
+import MovingSmokes from "../MovingSmokes";
 
 const Door = () => {
   const moveInternalDoors = () => {

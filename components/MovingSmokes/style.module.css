@@ -1,0 +1,27 @@
+.moveSmokeRight {
+  animation: moveSmokeRight 3s ease-in-out infinite alternate-reverse;
+  -webkit-animation: moveSmokeRight 3s ease-in-out infinite alternate-reverse;
+}
+.moveSmokeLeft {
+  animation: moveSmokeLeft 3s ease-in-out infinite alternate-reverse;
+
+  -webkit-animation: moveSmokeLeft 3s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes moveToLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
