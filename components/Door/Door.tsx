@@ -69,7 +69,7 @@ const Door = () => {
           ref={externalDoorRight}
           src="/door-wall-right.png"
           alt="ExternalDoor2"
-          className="w-full object-cover block absolute z-50 h-full origin-center "
+          className="w-full object-cover lg:object-fill block absolute z-50 h-full origin-center "
         />
         <img
           ref={internalDoorRight}

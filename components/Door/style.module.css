@@ -1,11 +1,11 @@
 .moveLeft {
-  animation: moveToLeft 1s ease-in both;
-  -webkit-animation: moveToLeft 1s ease-in both;
+  animation: moveToLeft 1.3s ease-in both;
+  -webkit-animation: moveToLeft 1.3s ease-in both;
 }
 
 .moveRight {
-  animation: moveToRight 1s ease-in both;
-  -webkit-animation: moveToRight 1s ease-in both;
+  animation: moveToRight 1.3s ease-in both;
+  -webkit-animation: moveToRight 1.3s ease-in both;
 }
 
 @keyframes moveToLeft {
