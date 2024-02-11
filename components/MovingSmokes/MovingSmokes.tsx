@@ -6,12 +6,16 @@ const MovingSmokes = () => {
       <img
         src="/smoke1.jpg"
         alt="smoke"
-        className={"block w-full h-full " + style["moveSmokeLeft"]}
+        className={
+          "block top-0 left-0 absolute w-full h-full " + style["moveToRight"]
+        }
       />
       <img
         src="/smoke2.jpg"
         alt="smoke"
-        className={"block w-full h-full " + style["moveSmokeRight"]}
+        className={
+          "block absolute top-0 left-0 w-full h-full " + style["moveToLeft"]
+        }
       />
     </div>
   );

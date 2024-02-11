@@ -1,11 +1,11 @@
-.moveSmokeRight {
-  animation: moveSmokeRight 3s ease-in-out infinite alternate-reverse;
-  -webkit-animation: moveSmokeRight 3s ease-in-out infinite alternate-reverse;
+.moveToLeft {
+  animation: moveToLeft 3s ease-in-out infinite alternate-reverse;
+  -webkit-animation: moveToLeft 3s ease-in-out infinite alternate-reverse;
 }
-.moveSmokeLeft {
-  animation: moveSmokeLeft 3s ease-in-out infinite alternate-reverse;
 
-  -webkit-animation: moveSmokeLeft 3s ease-in-out infinite alternate-reverse;
+.moveToRight {
+  animation: moveToRight 3s ease-in-out infinite alternate-reverse;
+  -webkit-animation: moveToRight 3s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes moveToLeft {
@@ -13,7 +13,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -22,6 +22,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
 }
