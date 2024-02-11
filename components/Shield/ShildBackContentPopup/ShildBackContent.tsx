@@ -20,16 +20,16 @@ const ShildBackContentPopup = ({
   return (
     <>
       {isActive && (
-        <div className="bg-black z-50 absolute  h-screen w-screen flex justify-center items-center">
-          <div className=" relative bg-white flex shrink-0 w-[90%] h-[90%] ">
+        <div className="bg-black bg-opacity-55 z-[1000] top-0 left-0 fixed  h-screen w-screen flex justify-center items-center">
+          <div className=" relative overflow-y-scroll bg-white flex md:flex-row flex-col justify-center items-center shrink-0 w-[90%] h-[90%] ">
             <button
-              className="absolute top-0 right-2 text-4xl"
+              className="absolute top-0 bg-white p-4 rounded-md right-2 text-4xl"
               onClick={disableActive}
             >
               <IoMdClose />
             </button>
-            <img src={img} alt="" className=" w-[30%]" />
-            <div className="w-[70%] flex flex-col justify-center items-center gap-10">
+            <img src={img} alt="" className=" block w-[100%] md:w-[30%]" />
+            <div className="p-4  md:w-[70%] flex flex-col justify-center items-center gap-10">
               <h3 className="text-4xl mb-2">{heading}</h3>
               <p className="text-xl ">{discription}</p>
               <Link className="text-white bg-yellow-500 p-3" href={"/"}>
