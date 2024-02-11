@@ -1,11 +1,13 @@
 .moveToLeft {
-  animation: moveToLeft 3s ease-in-out infinite alternate-reverse;
-  -webkit-animation: moveToLeft 3s ease-in-out infinite alternate-reverse;
+  filter: grayscale(1);
+  animation: moveToLeft 10s ease-in-out infinite alternate-reverse;
+  -webkit-animation: moveToLeft 10s ease-in-out infinite alternate-reverse;
 }
 
 .moveToRight {
-  animation: moveToRight 3s ease-in-out infinite alternate-reverse;
-  -webkit-animation: moveToRight 3s ease-in-out infinite alternate-reverse;
+  filter: grayscale(1);
+  animation: moveToRight 10s ease-in-out infinite alternate-reverse;
+  -webkit-animation: moveToRight 10s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes moveToLeft {
@@ -13,7 +15,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-30%);
   }
 }
 
@@ -22,6 +24,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(50%);
+    transform: translateX(40%);
   }
 }

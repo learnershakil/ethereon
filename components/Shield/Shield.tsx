@@ -19,6 +19,7 @@ const Shield = () => {
           <div className="w-[70%] h-[70%] bg-white m-auto"></div>
         </div>
       </div>
+      <div className=""></div>
     </>
   );
 };
