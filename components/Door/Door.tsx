@@ -49,8 +49,7 @@ const Door = () => {
 
   return (
     <div className="w-screen h-screen fixed z-50 flex top-0 left-0 ">
-      <MovingSmokes />
-      <div className="side-1 absolute w-full h-full ">
+      <div className="side-1 absolute w-full h-full  ">
         <img
           ref={externalDoorLeft}
           src={"/door-wall-left.png"}

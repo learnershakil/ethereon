@@ -1,3 +1,6 @@
+import Navigation from "@/components/Navigation";
+import ShieldContainer from "@/components/ShieldContainer";
+
 const page = () => {
   return (
     <>
@@ -8,7 +11,14 @@ const page = () => {
         />
         <h2 className="text-6xl font-bold text-white font-got">Events</h2>
       </header>
-      <main className=""></main>
+      <main className=" w-full flex  relative">
+        <img
+          src="/comp.png"
+          alt="mother of dragon"
+          className=" -z-50 absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <ShieldContainer />
+      </main>
     </>
   );
 };

@@ -25,11 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={poppins.variable + " relative"}>
+    <ClerkProvider>
+      <html lang="en">
         <Navigation />
-        {children}
-      </body>
-    </html>
+        <body className={""}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }

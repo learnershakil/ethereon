@@ -1,5 +1,7 @@
 "use client";
+import Navigation from "@/components/Navigation";
 import Shield from "@/components/Shield";
+import ShieldContainer from "@/components/ShieldContainer";
 import VideoBG from "@/components/VideoBg";
 
 const page = () => {
@@ -13,21 +15,13 @@ const page = () => {
         />
         <h1 className="font-got text-white text-6xl">WORKSHOP</h1>
       </header>
-      <main className=" w-full flex  relative">
+      <main className=" w-full flex py-32 relative">
         <img
           src="/comp.png"
           alt="mother of dragon"
           className=" -z-50 absolute top-0 left-0 w-full h-full object-cover"
         />
-        <div className="flex flex-wrap py-40 justify-between">
-          <Shield />
-          <Shield />
-          <Shield />
-          <Shield />
-          <Shield />
-          <Shield />
-          <Shield />
-        </div>
+        <ShieldContainer />
       </main>
     </>
   );
