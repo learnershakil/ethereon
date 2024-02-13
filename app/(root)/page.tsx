@@ -37,13 +37,15 @@ const page = () => {
           {
             <div
               className={
-                " mt-40 felx-col flex justify-center items-center gap-10 transition-all duration-150 " +
+                " mt-52 felx-col flex justify-center items-center gap-10 transition-all duration-150 " +
                 (showText ? " opacity-100 " : " opacity-0")
               }
             >
-              <h1 className="text-3xl capitalize text-white font-got font-bold ">
-                Welcome to ethereon
-              </h1>
+              <img
+                src="/front.png"
+                alt=""
+                className=" w-60 bg-black bg-opacity-25"
+              />
             </div>
           }
         </div>

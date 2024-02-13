@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Shield from "@/components/Shield";
 import ShildBackContentPopup from "../Shield/ShildBackContentPopup";
 
@@ -59,6 +59,7 @@ const data = [
 const ShieldContainer = () => {
   const [isPopupActive, setIsPopupActive] = useState(false);
   const [currentItem, setCurrentItem] = useState<number>(0);
+
   return (
     <div className="flex flex-wrap items-center justify-center lg:justify-between gap-10">
       <ShildBackContentPopup

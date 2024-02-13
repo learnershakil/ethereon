@@ -9,6 +9,8 @@ export default authMiddleware({
     "/store",
     "/events",
     "/events/:id",
+    "/api/category",
+    "/api/events",
     "/api/webhook/clerk",
     "/api/webhook/stripe",
     "/api/uploadthing",

@@ -24,60 +24,48 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="hidden bg-opacity-20 text-white gap-7 font-got items-center justify-between p-4 lg:flex bg-black fixed z-[999] w-full top-0 left-0 ">
-        <ul
-          className={
-            "flex gap-10 w-full text-2xl border-yellow-400  px-10 border-r-2 border-b-2 rounded-br-full " +
-            style["leftNav"]
-          }
-        >
-          <li className="">
+      <nav className="hidden bg-opacity-10 text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold fixed z-[999] w-full top-0 left-0 ">
+        <div className="logo">
+          <Link href="/" className="flex gap-3 items-center text-2xl">
+            <img src="/logo.jpg" className="w-16" alt="Ethereon Logo" />
+            <p className="font-got font-bold">Ethereon</p>
+          </Link>
+        </div>
+
+        <ul className={"flex gap-10    px-10  relative " + style["leftNav"]}>
+          <li className="hover:text-amber-400 transition-all duration-300">
             <Link href="/workshops" className="">
               Workshop
             </Link>
           </li>
-          <li className="">
+          <li className="hover:text-amber-400 transition-all duration-300">
             <Link href="/competitions" className="">
               Competitions
             </Link>
           </li>
-          <li className="">
+          <li className="hover:text-amber-400 transition-all duration-300">
             <Link href="/events" className="">
               Events
             </Link>
           </li>
-        </ul>
-
-        <div className="logo">
-          <Link href="/" className="text-4xl">
-            <img src="/logo.jpg" className="w-52" alt="Ethereon Logo" />
-          </Link>
-        </div>
-
-        <ul
-          className={
-            "flex flex-row-reverse items-center gap-10 w-full text-2xl border-l-2 border-b-2 px-10 rounded-bl-full " +
-            style["rightNav"]
-          }
-        >
-          <li className="mb-2">
-            <Link
-              href="/register"
-              className="bg-yellow-500 text-slate-300 py-2 px-4  font-bold rounded-tl-xl  rounded-br-xl"
-            >
-              Register
+          <li className="hover:text-amber-400 transition-all duration-300">
+            <Link href="/accommodation" className="">
+              Accommodation
             </Link>
           </li>
 
-          <li className="">
-            <Link href="/accommodation" className="">
-              Accommodation
+          <li className="mb-2 ">
+            <Link
+              href="/sign-in"
+              className="bg-yellow-500 hover:bg-yellow-400 transition-all duration-200  py-2 px-4  font-bold rounded-tl-xl  rounded-br-xl"
+            >
+              Register
             </Link>
           </li>
         </ul>
       </nav>
 
-      <nav className=" flex lg:hidden absolute   z-[999] w-full top-0 left-0 h-full">
+      <nav className=" flex lg:hidden absolute  z-[999] w-full top-0 left-0 h-full">
         <button
           className="text-white text-4xl z-50 absolute top-4 left-4"
           onClick={(e) => {
@@ -88,6 +76,15 @@ const Navigation = () => {
           {!isMobNavActive ? <CiMenuFries /> : <IoMdClose />}
         </button>
 
+        <div className="logo absolute left-20 z-[999]  top-3">
+          <Link
+            href="/"
+            className="flex gap-3 text-white items-center text-2xl"
+          >
+            <img src="/logo.jpg" className="w-16" alt="Ethereon Logo" />
+            <p className="font-got font-bold ">Ethereon</p>
+          </Link>
+        </div>
         <ul
           onClick={(e) => e.stopPropagation()}
           className={
@@ -95,6 +92,15 @@ const Navigation = () => {
             (isMobNavActive ? " -translate-x-0" : " -translate-x-full")
           }
         >
+          <li className="w-full pl-6 ">
+            <Link
+              onClick={() => setIsMobileNavActive(false)}
+              href={"/"}
+              className="text-center  inline-flex gap-2 items-center border-b-[1px] hover:active:text-yellow-400 border-slate-300 border-opacity-20"
+            >
+              Home
+            </Link>
+          </li>
           <li className="w-full pl-6 ">
             <Link
               onClick={() => setIsMobileNavActive(false)}
@@ -126,7 +132,7 @@ const Navigation = () => {
           <li className="w-full pl-6 ">
             <Link
               onClick={() => setIsMobileNavActive(false)}
-              href={"/register"}
+              href={"/sign-in"}
               className="text-center  inline-flex gap-2 items-center border-b-[1px] hover:active:text-yellow-400 border-slate-300 border-opacity-20"
             >
               Register

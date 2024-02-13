@@ -1,10 +1,17 @@
 "use client";
-import Navigation from "@/components/Navigation";
-import Shield from "@/components/Shield";
 import ShieldContainer from "@/components/ShieldContainer";
-import VideoBG from "@/components/VideoBg";
+import { useEffect } from "react";
 
 const page = () => {
+  useEffect(() => {
+    async function logMovies() {
+      const response = await fetch("/api/events");
+      const movies = await response.json();
+      console.log(movies);
+    }
+
+    logMovies();
+  }, []);
   return (
     <>
       <header className="h-[90vh]  overflow-hidden flex justify-center items-center relative w-screen">
