@@ -1,7 +1,7 @@
 function page() {
   return (
-    <div>page</div>
-  )
+    <h1>go to hell!!!!!!!!</h1>
+    )
 }
 
 export default page
