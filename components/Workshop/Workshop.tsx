@@ -30,16 +30,14 @@ const Workshop = ({ event, onExplore }: Props) => {
           onClick={() => {
             onExplore();
           }}
-          className="bg-yellow-400 transition-all duration-300 px-6 py-2 mt-1 font-got hover:bg-yellow-600"
+          className="bg-[#bd8c5c] transition-all duration-300 px-6 py-2 mt-1 font-got hover:bg-yellow-600"
         >
           Explore
         </button>
         <Link
           href={`/events/${event._id}`}
-          onClick={() => {
-            onExplore();
-          }}
-          className="bg-yellow-400 px-6 py-2 mt-1 font-got hover:bg-yellow-600"
+          onClick={() => {}}
+          className="bg-[#bd8c5c] px-6 py-2 mt-1 font-got hover:bg-yellow-600"
         >
           Register
         </Link>

@@ -6,6 +6,7 @@ import Shield from "@/components/Shield";
 import ShieldContainer from "@/components/ShieldContainer";
 import VideoBG from "@/components/VideoBg";
 import Collection from "@/components/shared/Collection";
+import style from "./style.module.css";
 //To get Data.
 import {
   getAllEvents,
@@ -32,12 +33,7 @@ const page = () => {
       <header className="h-screen relative w-screen">
         <img src="/chair.png" className="w-full h-full object-cover" alt="bg" />
       </header>
-      <main className=" w-full flex  relative">
-        <img
-          src="/comp.png"
-          alt=""
-          className=" -z-50 absolute top-0 left-0 w-full object-contain "
-        />
+      <main className={" w-full flex  relative " + style["main"]}>
         {events == null && (
           <h4 className="text-red-600 font-got text-center text-3xl` ">
             oops looks like there is an Error!

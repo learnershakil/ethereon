@@ -34,7 +34,7 @@ const page = () => {
       </header>
       <main className=" w-full flex py-32 relative">
         <img
-          src="/comp.png"
+          src="/comp2.png"
           alt="mother of dragon"
           className=" -z-50 absolute top-0 left-0 w-full h-full object-cover"
         />
