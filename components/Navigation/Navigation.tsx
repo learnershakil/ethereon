@@ -24,7 +24,7 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="hidden bg-opacity-40  text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold fixed z-[999] w-full top-0 left-0 ">
+      {/*<nav className="hidden bg-opacity-40  text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold fixed z-[999] w-full top-0 left-0 ">
         <div className="logo">
           <Link href="/" className="flex gap-3 items-center text-2xl">
             <img src="/logo.png" className="w-16" alt="Catalyst Logo" />
@@ -63,6 +63,78 @@ const Navigation = () => {
             </Link>
           </li>
         </ul>
+      </nav>*/}
+
+      <nav className="hidden bg-opacity-40  text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold fixed z-[999] w-full top-0 left-0 ">
+        <div className="nav-left relative w-[40%] h-14">
+          <img
+            src="/nav-left.png"
+            alt=""
+            className="absolute top-0 left-0 h-full
+        w-full"
+          />
+          <ul
+            className={
+              "flex gap-10 mt-2  px-10  text-2xl relative " + style["leftNav"]
+            }
+          >
+            <li className="hover:text-amber-400 transition-all duration-300">
+              <Link href="/workshops" className="">
+                Workshop
+              </Link>
+            </li>
+            <li className="hover:text-amber-400 transition-all duration-300">
+              <Link href="/competitions" className="">
+                Competitions
+              </Link>
+            </li>
+            <li className="hover:text-amber-400 transition-all duration-300">
+              <Link href="/events" className="">
+                Events
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="logo">
+          <Link href="/" className="flex gap-3 items-center text-2xl">
+            <img src="/logo.png" className="w-16" alt="Catalyst Logo" />
+            <p className="font-got font-bold">Catalyst</p>
+          </Link>
+        </div>
+        <div className="nav-right relative w-[40%] h-14">
+          <img
+            src="/nav-right.png"
+            alt=""
+            className="absolute top-0 left-0 h-full
+        w-full"
+          />
+          <ul
+            className={
+              "flex flex-row-reverse items-center gap-10 mt-2  px-10  text-2xl relative " +
+              style["leftNav"]
+            }
+          >
+            <li className="mt-1 ">
+              <Link
+                href="/sign-in"
+                className="bg-yellow-500   hover:bg-yellow-400 transition-all duration-200  py-2 px-4  font-bold rounded-tl-xl  rounded-br-xl"
+              >
+                Register
+              </Link>
+            </li>
+            <li className="hover:text-amber-400 transition-all duration-300">
+              <Link href="/accommodation" className="">
+                Accommodation
+              </Link>
+            </li>
+
+            <li className="hover:text-amber-400 transition-all duration-300">
+              <Link href="/aboutus" className="">
+                About us
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <nav className=" flex lg:hidden absolute  z-[999] w-full top-0 left-0 h-full">

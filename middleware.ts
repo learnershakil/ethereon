@@ -8,6 +8,8 @@ export default authMiddleware({
     "/accommodation",
     "/store",
     "/events",
+    "/aboutus",
+    "/admin",
     "/api/category",
     "/api/events",
     "/api/webhook/clerk",
