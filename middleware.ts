@@ -10,6 +10,8 @@ export default authMiddleware({
     "/events",
     "/aboutus",
     "/admin",
+    "/contactus",
+    "/sponsors",
     "/api/category",
     "/api/events",
     "/api/webhook/clerk",

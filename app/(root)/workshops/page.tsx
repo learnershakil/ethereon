@@ -14,7 +14,7 @@ const page = () => {
   const [events, setEvents] = useState<Event[] | null | undefined>(undefined);
 
   useEffect(() => {
-    getAllEvents({ category: "", limit: 100, page: 1, query: "" })
+    getAllEvents({ category: "workshop", limit: 100, page: 1, query: "" })
       .then((events) => {
         setEvents(events?.data || null);
       })
@@ -30,9 +30,12 @@ const page = () => {
           src="/workshop.png"
           alt=""
         />
-        <h1 className="font-got text-white text-6xl">WORKSHOP</h1>
+        <img
+          src="/workshopText.png"
+          className="text-6xl font-bold w-1/3 text-white font-got"
+        />
       </header>
-      <main className=" w-full flex py-32 relative">
+      <main className=" w-full flex py-40 relative">
         <img
           src="/comp2.png"
           alt="mother of dragon"

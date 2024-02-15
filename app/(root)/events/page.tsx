@@ -13,7 +13,7 @@ const page = () => {
   const [events, setEvents] = useState<Event[] | null | undefined>(undefined);
 
   useEffect(() => {
-    getAllEvents({ category: "", limit: 100, page: 1, query: "" })
+    getAllEvents({ category: "event", limit: 100, page: 1, query: "" })
       .then((events) => {
         setEvents(events?.data || null);
       })
@@ -26,12 +26,15 @@ const page = () => {
     <>
       <header className=" flex justify-center items-center w-screen h-screen relative">
         <img
-          src="/events.jpg"
+          src="/events.png"
           className="w-full h-full object-cover absolute -z-20 top-0 left-0"
         />
-        <h2 className="text-6xl font-bold text-white font-got">Events</h2>
+        <img
+          src="/eventsText.png"
+          className="text-6xl font-bold w-1/3 text-white font-got"
+        />
       </header>
-      <main className=" py-20 w-full gap-10 flex  relative">
+      <main className=" py-40 w-full gap-10 flex  relative">
         <img
           src="/comp.png"
           alt="mother of dragon"

@@ -19,7 +19,12 @@ import { useEffect, useState } from "react";
 const page = () => {
   const [events, setEvents] = useState<Event[] | null | undefined>(undefined);
   useEffect(() => {
-    getAllEvents({ category: "", limit: 100, page: 1, query: "" })
+    getAllEvents({
+      category: "competition",
+      limit: 100,
+      page: 1,
+      query: "",
+    })
       .then((events) => {
         setEvents(events?.data || null);
       })
@@ -33,8 +38,8 @@ const page = () => {
       <header className="h-screen relative w-screen">
         <img src="/chair.png" className="w-full h-full object-cover" alt="bg" />
       </header>
-      <main className={" w-full flex  relative " + style["main"]}>
-        {events == null && (
+      <main className={" w-full flex  relative py-40 " + style["main"]}>
+        {!events && (
           <h4 className="text-red-600 font-got text-center text-3xl` ">
             oops looks like there is an Error!
           </h4>
