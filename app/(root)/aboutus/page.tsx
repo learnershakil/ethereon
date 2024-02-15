@@ -4,7 +4,7 @@ const page = () => {
   return (
     <main
       className={
-        "relative flex-col w-screen h-screen flex  justify-center items-center "
+        "relative bg-yellow-700 md:bg-transparent flex-col w-screen h-screen flex  justify-center items-center "
       }
     >
       <img
@@ -12,7 +12,12 @@ const page = () => {
         alt=""
         className="absolute hidden md:block top-0 left-0 -z-10 w-full h-full"
       />
-      <div className="w-[37%] font-got text-2xl font-bold text-white  h-[80%] overflow-y-scroll absolute top-0 mt-48  left-4">
+      <img
+        src="/scrollPhone.png"
+        alt=""
+        className="absolute block md:hidden top-0 left-0 z-10 w-full h-full"
+      />
+      <div className="w-[65%] h-[50%] md:w-[37%] mt-1 font-got text-2xl font-bold text-white md:h-[80%] overflow-y-scroll z-20 md:absolute top-0 md:mt-48  left-4">
         Welcome to Catalyst, hosted at Lovely Professional University, the
         dynamic fusion of technology and innovation. Catalyst is not just a
         celebration but a competition that ignites student technological

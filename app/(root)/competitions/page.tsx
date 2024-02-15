@@ -35,8 +35,16 @@ const page = () => {
 
   return (
     <>
-      <header className="h-screen relative w-screen">
-        <img src="/chair.png" className="w-full h-full object-cover" alt="bg" />
+      <header className="h-screen flex justify-center items-center relative w-screen">
+        <img
+          src="/chair.png"
+          className="w-full h-full absolute top-0 left-0 -z-10 object-cover"
+          alt="bg"
+        />
+        <img
+          src="/competitionsText.png"
+          className="text-6xl font-bold w-2/3 text-white font-got"
+        />
       </header>
       <main className={" w-full flex  relative py-40 " + style["main"]}>
         {!events && (

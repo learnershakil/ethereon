@@ -3,7 +3,6 @@ import {
   getAllEvents,
   getRelatedEventsByCategory,
 } from "@/lib/actions/event.actions";
-import { formatDateTime } from "@/lib/utils";
 import { Event } from "@/types";
 import EventsShowcase from "@/components/EventsShowcase";
 import { useEffect, useState } from "react";

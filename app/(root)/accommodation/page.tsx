@@ -19,9 +19,10 @@ const page = () => {
         }
       >
         <div className="w-screen border-b-2 border-b-slate-200 h-screen  flex justify-evenly py-40 items-center flex-col relative ">
-          <h1 className="font-got w-full justify-center text-center text-4xl md:text-6xl lg:text-8xl capitalize text-white ">
-            Accommodation at LPU
-          </h1>
+          <img
+            src="/accomodationText.png"
+            className="text-6xl font-bold w-2/3 text-white font-got"
+          />
           <Link
             href={"/sign-in"}
             className="bg-yellow-600 text-xl hover:bg-yellow-500 transition-all duration-700 rounded-tl-3xl font-got font-bold rounded-ee-3xl text-white p-4"
