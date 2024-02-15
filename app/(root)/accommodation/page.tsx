@@ -18,8 +18,8 @@ const page = () => {
           "relative flex-col flex  justify-center items-center " + style["main"]
         }
       >
-        <div className="w-screen h-screen  flex justify-evenly py-40 items-center flex-col relative ">
-          <h1 className="font-got text-8xl capitalize text-white ">
+        <div className="w-screen border-b-2 border-b-slate-200 h-screen  flex justify-evenly py-40 items-center flex-col relative ">
+          <h1 className="font-got w-full justify-center text-center text-4xl md:text-6xl lg:text-8xl capitalize text-white ">
             Accommodation at LPU
           </h1>
           <Link
@@ -30,19 +30,29 @@ const page = () => {
           </Link>
         </div>
 
-        <div className="flex w-full justify-center">
-          <Tabs defaultValue="account" className="w-[90%] text-white">
-            <TabsList className="bg-orange-400 bg-opacity-65 text-white ">
-              <TabsTrigger value="account">About us</TabsTrigger>
-              <TabsTrigger value="policies">Accommodation policies</TabsTrigger>
-              <TabsTrigger value="instructions">Instructions</TabsTrigger>
-              <TabsTrigger value="faq">FAQs</TabsTrigger>
-              <TabsTrigger value="contact-us">Contact Us</TabsTrigger>
+        <div className="">
+          <Tabs defaultValue="about" className=" w-screen text-white">
+            <TabsList className="w-screen overflow-x-scroll bg-orange-700 bg-opacity-65  text-white ">
+              <TabsTrigger value="about" className="font-bold">
+                About us
+              </TabsTrigger>
+              <TabsTrigger className="font-bold" value="accomodation">
+                Accommodation policies
+              </TabsTrigger>
+              <TabsTrigger className="font-bold" value="instructions">
+                Instructions
+              </TabsTrigger>
+              <TabsTrigger className="font-bold" value="faq">
+                FAQs
+              </TabsTrigger>
+              <TabsTrigger className="font-bold" value="contact-us">
+                Contact Us
+              </TabsTrigger>
             </TabsList>
 
             <TabsContent
-              className="w-[80%] p-8 border-2 bg-orange-400 bg-opacity-65"
-              value="account"
+              className="w-full m-auto mt-3 md:w-[90%] lg:w-[80%] p-2 md:p-8 border-2 bg-orange-700 bg-opacity-65"
+              value="about"
             >
               Ethereon has been an example in achieving huge feats with
               unparalleled figures ever since its inception in 1998. Ethereon
@@ -64,12 +74,14 @@ const page = () => {
             </TabsContent>
 
             <TabsContent
-              value="policies"
-              className="w-[80%] p-8 border-2 bg-orange-400 bg-opacity-65"
+              value="accomodation"
+              className="w-full m-auto mt-3 md:w-[90%] lg:w-[80%] p-8 border-2 bg-orange-700 bg-opacity-65"
             >
               <div className="flex flex-col gap-4">
-                <div className="flex gap-10 ">
-                  <h4 className="shrink-0 w-[20%]">Accommodation Charges</h4>
+                <div className="flex gap-3 md:gap-10  md:flex-row flex-col ">
+                  <h4 className="shrink-0 w-full font-bold md:w-[20%]">
+                    Accommodation Charges
+                  </h4>
                   <p className="">
                     Accommodation charges are INR 2999 3499 (Early Bird Offer)
                     per candidate for 5 days. Maximum of 5 nights stay allowed
@@ -80,15 +92,19 @@ const page = () => {
                   </p>
                 </div>
 
-                <div className="flex gap-10">
-                  <h4 className="shrink-0 w-[20%]">Timing</h4>
+                <div className="flex gap-3 md:gap-10 md:flex-row flex-col">
+                  <h4 className="shrink-0 w-full font-bold md:w-[20%]">
+                    Timing
+                  </h4>
                   <p className="">
                     Check-in: 6:00 AM to 10:00 PM on your check-in date.
                   </p>
                 </div>
 
-                <div className="flex gap-10">
-                  <h4 className="shrink-0 w-[20%]">Cancellation Policy</h4>
+                <div className="flex gap-3 md:gap-10 md:flex-row flex-col">
+                  <h4 className="shrink-0 w-full font-bold md:w-[20%]">
+                    Cancellation Policy
+                  </h4>
                   <p className="">
                     Confirmed Accommodation can be cancelled through email only.
                     Send an e-mail having your Acco ID and the number of members
@@ -105,77 +121,49 @@ const page = () => {
             </TabsContent>
 
             <TabsContent
-              className="w-[80%] p-8 flex flex-col gap-4 border-2 bg-orange-400 bg-opacity-65"
+              className="md:w-[90%] m-auto mt-3 lg:w-[80%] p-8 bg-orange-700 border-2  bg-opacity-65"
               value="instructions"
             >
-              <div className="">
-                1. All guests carrying electronic items of any kind will have to
-                declare them at the Lovely Professional University main gate
-                through an 'Ethereon Gate Pass.' The belongings will also be
-                checked on the way out of LPU along with the 'Gate Pass,'
-                failing to do so will result in the belongings being impounded.
-              </div>
-
-              <div className="">
-                2. All guests will be provided with a mattress. Ethereon will
-                not provide mattress cover, blankets, or pillows. The guests are
-                encouraged to arrange them on their own (if required), since the
-                weather might get cold during the night.
-              </div>
-
-              <div className="">
-                3. Any commodities issued to the guests would have to be
-                returned in sound condition to the organizers during check-out.
-              </div>
-
-              <div className="">
-                4. Random checks would be made to avoid any illegal stay at the
-                campus. Any team failing to produce their electronic/physical
-                receipts of accommodation would be heavily fined and
-                disqualified.
-              </div>
-
-              <div className="">
-                5. Entry will be only through the 'Main Gate' of Lovely
-                Professional University. All other gates will be closed for
-                entry.
-              </div>
-
-              <div className="">
-                6. All guests are required to carry their valid government photo
-                ID proofs at all times. In addition, the student participants
-                are also required to carry their valid College photo ID card.
-                Any guest failing to produce their ID card will not be permitted
-                inside the campus during Ethereon 2023.
-              </div>
-
-              <div className="">
-                7. Alcohol, drugs, sharp objects, and explosives of any kind are
-                strictly prohibited inside the campus. Any other item if deemed
-                unsafe will be prohibited. The decision of Security and Ethereon
-                team will be final in case of any disputes.
-              </div>
-
-              <div className="">
-                8. No outside vehicles will be allowed into the campus during
-                Ethereon 2023.
-              </div>
-
-              <div className="">
-                9. All guests are required to maintain the decorum and
-                cleanliness of the campus, and follow the rules of the campus at
-                all times.
-              </div>
-
-              <div className="">
-                10. Ethereon 2023 and Lovely Professional University will not be
-                responsible for any mishaps that occur through the duration of
-                stay for Ethereon 2023.
-              </div>
+              1. All guests carrying electronic items of any kind will have to
+              declare them at the Lovely Professional University main gate
+              through an 'Ethereon Gate Pass.' The belongings will also be
+              checked on the way out of LPU along with the 'Gate Pass,' failing
+              to do so will result in the belongings being impounded. <br />{" "}
+              <br /> 2. All guests will be provided with a mattress. Ethereon
+              will not provide mattress cover, blankets, or pillows. The guests
+              are encouraged to arrange them on their own (if required), since
+              the weather might get cold during the night. <br /> <br />
+              3. Any commodities issued to the guests would have to be returned
+              in sound condition to the organizers during check-out. <br />{" "}
+              <br />
+              4. Random checks would be made to avoid any illegal stay at the
+              campus. Any team failing to produce their electronic/physical
+              receipts of accommodation would be heavily fined and disqualified.
+              <br /> <br />
+              5. Entry will be only through the 'Main Gate' of Lovely
+              Professional University. All other gates will be closed for entry.
+              <br /> <br />
+              6. All guests are required to carry their valid government photo
+              ID proofs at all times. In addition, the student participants are
+              also required to carry their valid College photo ID card. Any
+              guest failing to produce their ID card will not be permitted
+              inside the campus during Ethereon 2023. <br /> <br />
+              7. Alcohol, drugs, sharp objects, and explosives of any kind are
+              strictly prohibited inside the campus. Any other item if deemed
+              unsafe will be prohibited. The decision of Security and Ethereon
+              team will be final in case of any disputes. <br /> <br />
+              8. No outside vehicles will be allowed into the campus during
+              Ethereon 2023. <br /> <br />
+              9. All guests are required to maintain the decorum and cleanliness
+              of the campus, and follow the rules of the campus at all times.
+              <br /> <br />
+              10. Ethereon 2023 and Lovely Professional University will not be
+              responsible for any mishaps that occur through the duration of
+              stay for Ethereon 2023.
             </TabsContent>
 
             <TabsContent
-              className="w-[80%] p-8 flex flex-col gap-4 border-2 bg-orange-400 bg-opacity-65"
+              className="md:w-[90%] m-auto mt-3 lg:w-[80%] p-8 gap-4 border-2 bg-orange-700 bg-opacity-65"
               value="faq"
             >
               <Accordion type="single" collapsible className="w-full">
@@ -241,11 +229,9 @@ const page = () => {
             </TabsContent>
 
             <TabsContent
-              className="w-[80%] p-8 border-2 bg-orange-400 bg-opacity-65"
+              className="md:w-[90%] m-auto mt-3 lg:w-[80%] p-8 border-2 bg-orange-700 bg-opacity-65"
               value="contact-us"
-            >
-              <div className=""></div>
-            </TabsContent>
+            ></TabsContent>
           </Tabs>
         </div>
       </main>

@@ -1,16 +1,26 @@
 "use client";
 import ShieldContainer from "@/components/ShieldContainer";
-import { useEffect } from "react";
+import WorkshopShowcase from "@/components/WorkshopShowcase";
+import { useEffect, useState } from "react";
+import {
+  getAllEvents,
+  getRelatedEventsByCategory,
+} from "@/lib/actions/event.actions";
+import { formatDateTime } from "@/lib/utils";
+import { Event } from "@/types";
+import EventsShowcase from "@/components/EventsShowcase";
 
 const page = () => {
-  useEffect(() => {
-    async function logMovies() {
-      const response = await fetch("/api/events");
-      const movies = await response.json();
-      console.log(movies);
-    }
+  const [events, setEvents] = useState<Event[] | null | undefined>(undefined);
 
-    logMovies();
+  useEffect(() => {
+    getAllEvents({ category: "", limit: 100, page: 1, query: "" })
+      .then((events) => {
+        setEvents(events?.data || null);
+      })
+      .catch((err) => {
+        setEvents(null);
+      });
   }, []);
   return (
     <>
@@ -28,7 +38,16 @@ const page = () => {
           alt="mother of dragon"
           className=" -z-50 absolute top-0 left-0 w-full h-full object-cover"
         />
-        <ShieldContainer />
+        {events == null && (
+          <h4 className="text-red-600 font-got text-center text-3xl` ">
+            oops looks like there is an Error!
+          </h4>
+        )}
+        {events && (
+          <>
+            <WorkshopShowcase events={events} />
+          </>
+        )}
       </main>
     </>
   );

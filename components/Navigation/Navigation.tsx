@@ -24,11 +24,11 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="hidden bg-opacity-10 text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold fixed z-[999] w-full top-0 left-0 ">
+      <nav className="hidden bg-opacity-40  text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold fixed z-[999] w-full top-0 left-0 ">
         <div className="logo">
           <Link href="/" className="flex gap-3 items-center text-2xl">
-            <img src="/logo.jpg" className="w-16" alt="Ethereon Logo" />
-            <p className="font-got font-bold">Ethereon</p>
+            <img src="/logo.png" className="w-16" alt="Catalyst Logo" />
+            <p className="font-got font-bold">Catalyst</p>
           </Link>
         </div>
 
@@ -79,10 +79,10 @@ const Navigation = () => {
         <div className="logo absolute left-20 z-[999]  top-3">
           <Link
             href="/"
-            className="flex gap-3 text-white items-center text-2xl"
+            className="flex gap-1 text-white items-center text-2xl"
           >
-            <img src="/logo.jpg" className="w-16" alt="Ethereon Logo" />
-            <p className="font-got font-bold ">Ethereon</p>
+            <img src="/logo.png" className="w-12" alt="Catalyst Logo" />
+            <p className="font-got  font-bold ">Catalyst</p>
           </Link>
         </div>
         <ul

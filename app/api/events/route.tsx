@@ -11,8 +11,8 @@ export async function GET(req: Request) {
     if (!foundEvents) {
       return NextResponse.json(
         {
-          error: "No Categories Exists",
-          message: "Please fill the categories.",
+          error: "No Events Exists",
+          message: "Please fill the Events.",
         },
         { status: 404 }
       );

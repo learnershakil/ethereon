@@ -37,14 +37,14 @@ const page = () => {
           {
             <div
               className={
-                " mt-52 felx-col flex justify-center items-center gap-10 transition-all duration-150 " +
-                (showText ? " opacity-100 " : " opacity-0")
+                "  w-full h-full relative bg-opacity-25 flex justify-center items-center gap-10 transition-all duration-700 " +
+                (showText ? " opacity-100 scale-100 " : " scale-125 opacity-0")
               }
             >
               <img
                 src="/front.png"
                 alt=""
-                className=" w-60 bg-black bg-opacity-25"
+                className="absolute top-0 pt-44  w-2/4 lg:w-1/4"
               />
             </div>
           }

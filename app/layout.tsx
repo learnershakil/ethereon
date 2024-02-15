@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Risc",
+  title: "Catalyst",
   description: "Events of Risc.",
   icons: {
     icon: "/logo.jpg",

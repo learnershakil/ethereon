@@ -1,22 +1,53 @@
 "use client";
+import EventsShowcase from "@/components/EventsShowcase";
 import Navigation from "@/components/Navigation";
+import Popup from "@/components/Popup";
 import Shield from "@/components/Shield";
 import ShieldContainer from "@/components/ShieldContainer";
 import VideoBG from "@/components/VideoBg";
+import Collection from "@/components/shared/Collection";
+//To get Data.
+import {
+  getAllEvents,
+  getRelatedEventsByCategory,
+} from "@/lib/actions/event.actions";
+import { formatDateTime } from "@/lib/utils";
+import { Event } from "@/types";
+import { useEffect, useState } from "react";
 
 const page = () => {
+  const [events, setEvents] = useState<Event[] | null | undefined>(undefined);
+  useEffect(() => {
+    getAllEvents({ category: "", limit: 100, page: 1, query: "" })
+      .then((events) => {
+        setEvents(events?.data || null);
+      })
+      .catch((err) => {
+        setEvents(null);
+      });
+  }, []);
+
   return (
     <>
       <header className="h-screen relative w-screen">
-        <VideoBG onLoadedData={() => {}} isDarkBg={false} />
+        <img src="/chair.png" className="w-full h-full object-cover" alt="bg" />
       </header>
       <main className=" w-full flex  relative">
         <img
           src="/comp.png"
-          alt="mother of dragon"
-          className=" -z-50 absolute top-0 left-0 w-full h-full object-cover"
+          alt=""
+          className=" -z-50 absolute top-0 left-0 w-full object-contain "
         />
-        <ShieldContainer />
+        {events == null && (
+          <h4 className="text-red-600 font-got text-center text-3xl` ">
+            oops looks like there is an Error!
+          </h4>
+        )}
+        {events && (
+          <>
+            <EventsShowcase events={events} />
+          </>
+        )}
       </main>
     </>
   );

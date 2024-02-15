@@ -1,59 +1,55 @@
 import { useState } from "react";
 import style from "./style.module.css";
-
+import Link from "next/link";
 interface Props {
   img: string;
   title: string;
+  price: string;
+  isFree: boolean;
   onClick: () => void;
-  onShare: () => void;
-  onRegister: () => void;
+  id: string;
 }
 /* Share, Explore, Register */
-const Shield = ({ onClick, img, onRegister, onShare, title }: Props) => {
-  const [isActive, setIsActive] = useState(false);
+const Shield = ({ onClick, img, title, price, id, isFree }: Props) => {
   return (
     <>
       <div className="flex justify-center items-center flex-col">
-        <div
-          onClick={() => {
-            onClick();
-            setIsActive(true);
-          }}
-          className={style["shield"]}
-        >
+        <div className={style["shield"]}>
           <div className={style["shieldFront"]}></div>
-          <div className={style["shieldBack"]}>
-            <div className="w-[65%] h-[65%] flex flex-col bg-white rounded-xl m-auto">
+          <div
+            className={
+              style["shieldBack"] + " flex flex-col justify-center items-center"
+            }
+          >
+            <div className="w-[75%] h-56  relative  flex justify-center  items-end rounded-xl">
               <img
                 src={img}
-                className="object-contain h-70%"
+                className="object-fill absolute -z-10 mt- rounded-bl-3xl rounded-br-3xl h-full w-full "
                 alt="no img found!"
               />
-              <div className="">
-                <h4 className="">{title}</h4>
-                <div className="flex gap-3 px-1">
-                  <button
-                    className="px-4 py-2 bg-yellow-300 rounded-md hover:bg-yellow-400 transition-all duration-150"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onRegister();
-                    }}
-                  >
-                    Register Now
-                  </button>
+              <div className="flex gap-2 mt-5">
+                <Link
+                  href={`/events/${id}`}
+                  className="px-4 py-2 bg-[#ffd342] text-white font-bold rounded-md hover:bg-yellow-400 transition-all text-sm duration-150"
+                >
+                  Register Now
+                </Link>
 
-                  <button
-                    className="px-4 py-2 bg-blue-300 text-white rounded-md hover:bg-blue-400 transition-all duration-150"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onShare();
-                    }}
-                  >
-                    Share Now
-                  </button>
-                </div>
+                <button
+                  className="px-4 py-2 bg-[#dfa43b] font-bold text-white rounded-md hover:bg-yellow-400 transition-all duration-150 "
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onClick();
+                  }}
+                >
+                  Explore
+                </button>
               </div>
             </div>
+
+            <p className="font-got mt-4 text-white font-bold  text-2xl bg-green-400 p-2 rounded-lg ">
+              {!isFree ? price + " rupee" : "Free"}
+            </p>
           </div>
         </div>
         <div className="h-20 w-72">
