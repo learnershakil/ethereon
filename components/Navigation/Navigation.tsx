@@ -5,6 +5,8 @@ import style from "./style.module.css";
 import { CiFacebook, CiInstagram, CiLinkedin } from "react-icons/ci";
 import { CiMenuFries } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { Button } from "../ui/button";
 
 const Navigation = () => {
   const [isMobNavActive, setIsMobileNavActive] = useState(false);
@@ -65,7 +67,7 @@ const Navigation = () => {
         </ul>
       </nav> */}
 
-      <nav className="hidden bg-opacity-40  text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold fixed z-[999] w-full top-0 left-0 ">
+      <nav className="  hidden bg-opacity-40  text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold fixed z-[999] w-full top-0 left-0 ">
         <img
           src="/navTop.png"
           alt=""
@@ -111,12 +113,19 @@ const Navigation = () => {
             }
           >
             <li className="mt-1 ">
-              <Link
-                href="/sign-in"
-                className="bg-yellow-500   hover:bg-yellow-400 transition-all duration-200  py-2 px-4  font-bold rounded-tl-xl  rounded-br-xl"
-              >
-                Login
-              </Link>
+              <SignedIn>
+                <UserButton afterSignOutUrl="/" />
+              </SignedIn>
+              <SignedOut>
+                <Button asChild className="rounded-full" size="lg">
+                  <Link
+                    href="/sign-in"
+                    className="bg-yellow-500   hover:bg-yellow-400 transition-all duration-200  py-2 px-4  font-bold rounded-tl-md  rounded-br-md"
+                  >
+                    Login
+                  </Link>
+                </Button>
+              </SignedOut>
             </li>
             <li className="hover:text-amber-400 transition-all duration-300">
               <Link href="/accommodation" className="">
@@ -133,7 +142,7 @@ const Navigation = () => {
         </div>
       </nav>
 
-      <nav className="hidden bg-opacity-40  text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold fixed z-[999] w-full bottom-0 left-0 ">
+      <nav className="hidden bg-opacity-40  text-white gap-7 font-poppins items-center justify-between p-4 lg:flex font-bold absolute z-[999] w-full bottom-0 left-0 ">
         <div className="nav-left relative w-[50%] h-14">
           <img
             src="/nav-left.png"
@@ -199,7 +208,7 @@ const Navigation = () => {
         </div>
       </nav>
 
-      <nav className=" flex lg:hidden absolute  z-[999] w-full top-0 left-0 h-full">
+      <nav className=" flex lg:hidden fixed  z-[999] w-full top-0 left-0 h-28">
         <button
           className="text-white text-4xl z-50 absolute top-4 left-4"
           onClick={(e) => {
@@ -210,7 +219,7 @@ const Navigation = () => {
           {!isMobNavActive ? <CiMenuFries /> : <IoMdClose />}
         </button>
 
-        <div className="logo absolute left-20 z-[999]  top-3">
+        <div className="logo fixed left-20 z-[999]  top-3">
           <Link
             href="/"
             className="flex gap-1 text-white items-center text-2xl"
@@ -222,7 +231,7 @@ const Navigation = () => {
         <ul
           onClick={(e) => e.stopPropagation()}
           className={
-            "h-full w-60 font-heading flex flex-col gap-5 text-lg bg-black fixed top-0 text-white transition-all duration-300 pt-24 left-0 z-40 " +
+            "h-screen w-60 font-heading flex flex-col gap-5 text-lg bg-black fixed top-0 text-white transition-all duration-300 pt-24 left-0 z-40 " +
             (isMobNavActive ? " -translate-x-0" : " -translate-x-full")
           }
         >
@@ -303,13 +312,18 @@ const Navigation = () => {
             </Link>
           </li>
           <li className="w-full pl-6 ">
-            <Link
-              onClick={() => setIsMobileNavActive(false)}
-              href={"/sign-in"}
-              className="text-center  inline-flex gap-2 items-center border-b-[1px] hover:active:text-yellow-400 border-slate-300 border-opacity-20"
-            >
-              Login
-            </Link>
+            <SignedOut>
+              <Link
+                onClick={() => setIsMobileNavActive(false)}
+                href="/sign-in"
+                className="text-center  inline-flex gap-2 items-center border-b-[1px] hover:active:text-yellow-400 border-slate-300 border-opacity-20"
+              >
+                Login
+              </Link>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </li>
         </ul>
       </nav>

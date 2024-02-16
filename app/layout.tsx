@@ -27,8 +27,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <Navigation />
-        <body className={""}>{children}</body>
+        <body className={""}>
+          <Navigation />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
