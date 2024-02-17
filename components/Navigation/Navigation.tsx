@@ -138,6 +138,11 @@ const Navigation = () => {
                 Events
               </Link>
             </li>
+            <li className="hover:text-amber-400 transition-all duration-300">
+              <Link href="/profile" className="">
+                Profile
+              </Link>
+            </li>            
           </ul>
         </div>
       </nav>
