@@ -193,19 +193,19 @@ const Navigation = () => {
             }
           >
             <li className="hover:text-amber-400 transition-all duration-300">
-              <a href="/" className="">
+              <a href="https://www.facebook.com/RISC.LPU/" className="">
                 <CiFacebook />
               </a>
             </li>
 
             <li className="hover:text-amber-400 transition-all duration-300">
-              <a href="/" className="">
+              <a href="https://www.instagram.com/risc_lpu/" className="">
                 <CiInstagram />
               </a>
             </li>
 
             <li className="hover:text-amber-400 transition-all duration-300">
-              <a href="/" className="">
+              <a href="https://www.linkedin.com/company/risc-lpu/" className="">
                 <CiLinkedin />
               </a>
             </li>
