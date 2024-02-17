@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { DeleteConfirmation } from './DeleteConfirmation'
+import { Button } from '../ui/button'
 
 type CardProps = {
   event: IEvent,
@@ -68,6 +69,8 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
               <Image src="/assets/icons/arrow.svg" alt="search" width={10} height={10} />
             </Link>
           )}
+
+           <a href="" className="px-6 py-2 bg-blue-400 hover:bg-blue-600 transition-all duration-200 text-white  rounded-3xl ">Team</a>
         </div>
       </div>
     </div>
